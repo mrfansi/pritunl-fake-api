@@ -57,7 +57,7 @@ if(isset($_GET['path'])) {
         }
 
         if($state == 'Active') {
-            $result->active = $body->version < 1003031164068 ? $license != 'premium' : $license == 'enterprise_plus';
+            $result->active = true;
             $result->status = $state;
             $result->plan = $license;
             $result->quantity = 42;
